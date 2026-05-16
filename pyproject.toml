@@ -1,0 +1,46 @@
+[project]
+name        = "nvibrant-tui"
+description = "TUI for configuring Nvidia Digital Vibrance on Wayland"
+version     = "0.1.0"
+authors     = [{name="Enrique Alonso"}]
+readme      = "README.md"
+license     = "GPL-3.0-only"
+requires-python = ">=3.10"
+dependencies = [
+    "nvibrant>=1.2",
+    "textual>=8.0",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Utilities",
+]
+keywords = ["nvidia", "vibrance", "wayland", "tui", "display"]
+
+[project.urls]
+Repository = "https://github.com/enrialonso/nvibrant-tui"
+Issues     = "https://github.com/enrialonso/nvibrant-tui/issues"
+
+[project.scripts]
+nvibrant-tui = "nvibrant_tui.__main__:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.24",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[build-system]
+requires      = ["hatchling"]
+build-backend = "hatchling.build"
