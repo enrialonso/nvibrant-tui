@@ -1,7 +1,7 @@
 [project]
 name        = "nvibrant-tui"
 description = "TUI for configuring Nvidia Digital Vibrance on Wayland"
-version     = "0.1.0"
+version     = "0.1.1"
 authors     = [{name="Enrique Alonso"}]
 readme      = "README.md"
 license     = "GPL-3.0-only"
