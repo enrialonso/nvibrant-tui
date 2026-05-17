@@ -5,7 +5,7 @@ from textual.css.query import NoMatches
 from textual.events import MouseDown
 from textual.message import Message
 from textual.widget import Widget
-from textual.widgets import Button, Footer, Header, Label, LoadingIndicator, Switch
+from textual.widgets import Button, Footer, Header, Label, Link, LoadingIndicator, Switch
 from textual import work
 
 from nvibrant_tui import autostart, backend, config
@@ -215,6 +215,12 @@ class NvibrantApp(App):
     #auto-apply, #link-all {
         margin-right: 3;
     }
+    #attribution {
+        height: 1;
+        padding: 0 2;
+        color: $text-disabled;
+        text-align: right;
+    }
     """
 
     def __init__(self) -> None:
@@ -240,6 +246,11 @@ class NvibrantApp(App):
                     disabled=not self._systemd_available,
                     tooltip="" if self._systemd_available else "Requires systemd",
                 )
+            yield Link(
+                "Powered by nvibrant · Tremeschin",
+                url="https://github.com/Tremeschin/nvibrant",
+                id="attribution",
+            )
         yield Footer()
 
     def on_mount(self) -> None:

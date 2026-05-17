@@ -89,6 +89,12 @@ python -m venv .venv && .venv/bin/pip install -e ".[dev]"
 
 ---
 
+## Acknowledgements
+
+nvibrant-tui is a frontend for [nvibrant](https://github.com/Tremeschin/nvibrant) by [Tremeschin](https://github.com/Tremeschin), which does the actual work of talking to the NVIDIA driver. None of this would exist without it.
+
+---
+
 ## License
 
 GPL-3.0 — see [LICENSE](LICENSE).
